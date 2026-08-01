@@ -1,0 +1,27 @@
+============================================================
+MAPA DE NAVEGACIÓN - PROYECTO RUTINAS GYM (UNIDAD 2)
+============================================================
+
+Este mapa describe el flujo de usuario y las rutas configuradas en el NavHost.
+
+1. RUTA: "welcome" (Pantalla de Bienvenida)
+   - Función: Branding inicial y selección de acceso.
+   - Destinos: Navega a "home" al pulsar "Invitado".
+
+2. RUTA: "home" (Panel Principal)
+   - Función: Listado de categorías militares mediante LazyColumn.
+   - Componentes: Menú lateral (Drawer) activo para navegación global.
+   - Destinos: Navega a "details/{categoryName}" al seleccionar una rutina.
+
+3. RUTA: "details/{categoryName}" (Vista de Ejercicios)
+   - Función: Listado en cascada de los ejercicios de la división.
+   - Diseño: Implementado con ConstraintLayout para adaptabilidad.
+   - Destinos: Navega a "workout_session/{categoryName}" para iniciar el entreno.
+
+4. RUTA: "workout_session/{categoryName}" (Sesión Activa)
+   - Función: Temporizador cíclico de 4 min ejercicio / 40 seg descanso.
+   - Lógica: Avance automático entre ejercicios de la lista.
+
+DIAGRAMA LÓGICO:
+[Welcome] -> [Home] -> [Details] -> [Workout Session]
+============================================================

@@ -1,0 +1,35 @@
+============================================================
+DISEÑO DE BASE DE DATOS (PUNTO 3)
+============================================================
+
+1. SCRIPT CREATE TABLE:
+-----------------------
+CREATE TABLE Categoria (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL,
+    nivel TEXT NOT NULL
+);
+
+CREATE TABLE Ejercicio (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    categoria_id INTEGER,
+    nombre TEXT NOT NULL,
+    descripcion TEXT,
+    repeticiones TEXT,
+    FOREIGN KEY(categoria_id) REFERENCES Categoria(id)
+);
+
+2. CONSULTA JOIN PREVISTA:
+--------------------------
+SELECT C.titulo, E.nombre, E.repeticiones
+FROM Categoria C
+INNER JOIN Ejercicio E ON C.id = E.categoria_id
+WHERE C.titulo = 'Pecho';
+
+3. DICCIONARIO DE DATOS (SÍNTESIS):
+-----------------------------------
+- id (INTEGER): Clave primaria autoincremental.
+- titulo (TEXT): Obligatorio. Nombre de la división militar.
+- categoria_id (INTEGER): Clave foránea que relaciona con Categoria.
+- nombre/descripcion/repeticiones (TEXT): Detalles del ejercicio táctico.
+============================================================

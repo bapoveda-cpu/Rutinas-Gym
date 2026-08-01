@@ -1,0 +1,34 @@
+============================================================
+DIAGRAMA ENTIDAD-RELACIÓN (ER) - PROYECTO RUTINAS GYM
+============================================================
+
+Representación lógica de la Base de Datos SQLite:
+
+   +-----------------------+           +-----------------------+
+   |       CATEGORIA       |           |       EJERCICIO       |
+   +-----------------------+           +-----------------------+
+   | [PK] id (INTEGER)     | 1       N | [PK] id (INTEGER)     |
+   |      titulo (TEXT)    |-----------| [FK] cat_id (INTEGER) |
+   |      nivel (TEXT)     |           |      nombre (TEXT)    |
+   |                       |           |      desc (TEXT)      |
+   |                       |           |      reps (TEXT)      |
+   +-----------------------+           +-----------------------+
+
+------------------------------------------------------------
+LEYENDA Y EXPLICACIÓN PARA LA DEFENSA:
+------------------------------------------------------------
+1. RELACIÓN 1 a N:
+   Una "Categoría" (ej: Pecho) puede contener muchos (N)
+   "Ejercicios" (ej: Flexiones, Diamante, etc.).
+
+2. CLAVE PRIMARIA [PK]:
+   Identificadores únicos para cada tabla (id).
+
+3. CLAVE FORÁNEA [FK]:
+   El campo 'categoria_id' en la tabla EJERCICIO permite
+   vincular cada ejercicio con su categoría correspondiente.
+
+4. INTEGRIDAD REFERENCIAL:
+   Se ha definido una restricción FOREIGN KEY para asegurar
+   que no existan ejercicios sin una categoría válida.
+============================================================

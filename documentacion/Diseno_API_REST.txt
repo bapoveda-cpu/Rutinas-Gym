@@ -1,0 +1,34 @@
+============================================================
+DISEÑO DE API REST (PUNTO 4 - ROL 3)
+============================================================
+
+1. ENDPOINTS SELECCIONADOS:
+---------------------------
+- BASE_URL: https://api.tu-servidor-gym.com/
+- GET /workouts: Recupera el listado completo de categorías y ejercicios.
+
+2. EJEMPLO DE RESPUESTA JSON:
+-----------------------------
+{
+  "id": 1,
+  "title": "Abdominales",
+  "level": "Militar",
+  "exercises": [
+    {
+      "name": "Crunch Militar",
+      "description": "Manos en la nuca, subida explosiva.",
+      "reps": "4 Series x 25"
+    },
+    {
+      "name": "Elevación de Piernas",
+      "description": "Mantener cuerpo recto, subir pies a 90°.",
+      "reps": "4 Series x 15"
+    }
+  ]
+}
+
+3. LIBRERÍAS UTILIZADAS:
+------------------------
+- Retrofit 2: Para la gestión de peticiones HTTP asíncronas.
+- GSON Converter: Para la conversión automática de JSON a objetos Kotlin (POJO).
+============================================================
