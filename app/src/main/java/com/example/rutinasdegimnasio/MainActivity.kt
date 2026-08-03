@@ -213,7 +213,7 @@ fun WorkoutHomeScreen(uiState: WorkoutUiState, onCategoryClick: (String) -> Unit
                     modifier = Modifier.fillMaxSize().padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    item { Text("Selecciona tu División", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
+                    item { Text("Selecciona tu rutina de entrenamiento", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
                     items(uiState.categories) { category ->
                         Card(
                             modifier = Modifier.fillMaxWidth().clickable { onCategoryClick(category.title) },
