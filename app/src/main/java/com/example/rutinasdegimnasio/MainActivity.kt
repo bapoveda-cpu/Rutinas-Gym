@@ -469,7 +469,9 @@ fun WorkoutSessionScreen(category: ExerciseCategory, onFinish: () -> Unit) {
                 Text(text = currentExercise.description, textAlign = TextAlign.Center, color = Color.Gray)
             }
             Spacer(modifier = Modifier.weight(1f))
-            TextButton(onClick = onFinish) { Text("ABANDONAR MISIÓN", color = Color.Red) }
+            TextButton(onClick = onFinish) {
+                Text("SALIR DEL ENTRENAMIENTO", color = Color.Red)
+            }
         }
     }
 }
