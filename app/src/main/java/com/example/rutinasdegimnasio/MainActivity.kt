@@ -242,7 +242,7 @@ fun WorkoutHomeScreen(uiState: WorkoutUiState, onCategoryClick: (String) -> Unit
                     Text(
                         text = uiState.message,
                         color = Color.Red,
-                        textAlign = TextAlign.Center.
+                        textAlign = TextAlign.Center
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
