@@ -223,9 +223,33 @@ fun WorkoutHomeScreen(uiState: WorkoutUiState, onCategoryClick: (String) -> Unit
         when (uiState) {
             is WorkoutUiState.Loading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             is WorkoutUiState.Error -> {
-                Column(modifier = Modifier.fillMaxSize().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                    Text(text = uiState.message, color = Color.Red)
-                    Button(onClick = onRetry) { Text("Reintentar") }
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(24.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Text(
+                        text = "No se pudieron cargar las rutinas",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center
+                    )
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    Text(
+                        text = uiState.message,
+                        color = Color.Red,
+                        textAlign = TextAlign.Center
+                    )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    Button(onClick = onRetry) {
+                        Text("Reintentar")
+                    }
                 }
             }
             is WorkoutUiState.Success -> {
