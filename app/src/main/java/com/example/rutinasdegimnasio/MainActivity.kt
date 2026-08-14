@@ -166,7 +166,7 @@ fun WelcomeScreen(onLoginSuccess: () -> Unit) {
         verticalArrangement = Arrangement.Center
     ) {
         Text(text = "RUTINAS GYM", fontSize = 48.sp, fontWeight = FontWeight.Black, color = Color.White)
-        Text(text = "Disciplina y Fuerza", fontSize = 18.sp, color = Color.White.copy(alpha = 0.8f))
+        Text(text = "Entrena, mejora y alcanza tus objetivos", fontSize = 18.sp, color = Color.White.copy(alpha = 0.8f))
         Spacer(modifier = Modifier.height(48.dp))
         OutlinedTextField(
             value = email, onValueChange = { email = it },
