@@ -32,3 +32,4 @@ LEYENDA Y EXPLICACIÓN PARA LA DEFENSA:
    Se ha definido una restricción FOREIGN KEY para asegurar
    que no existan ejercicios sin una categoría válida.
 ============================================================
+// Actualizado para Avance 2
